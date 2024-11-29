@@ -15,7 +15,7 @@ export class AccountController {
     AppState.on('account', _drawAccount)
     _drawAccount()
   }
-  a
+
   async updateAccount() {
     try {
       event.preventDefault()
