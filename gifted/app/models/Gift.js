@@ -11,10 +11,15 @@ export class Gift {
   }
 
   get GiftCardTemplate() {
-    return /*html*/
+    return /*html*/`
     <div class="col-md-3 p-3">
       <div class="gift-card ${this.opened ? 'opened' : ''}" onclick="app.GiftsControlller.openGift('${this.id}')">
-        <div class="gift-image" style="background-image: url"
+        <div class="gift-image" style="background-image: url(${this.opened ? this.url : 'assets/img/gift-box.png'})">
+          ${!this.opened ? '<div class="click-to-open">Click to Open</div>' : ''}
         </div>
+        <div class="gift-tag">${this.tag}</div>
     </div>
+  </div>
+  `
   }
+}
