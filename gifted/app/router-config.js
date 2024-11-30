@@ -18,7 +18,7 @@ export const router = new Router([
           <form onsubmit="app.GiftsController.createGift(event)">
             <div class="mb-3">
               <label for="tag">Tag</label>
-              <input type="text" class="form-control" name="tag" required maxlength="120">
+              <input type="text" class="form-control" name="tag" required max_length="120">
             </div>
             <div class="mb-3">
               <label for="url">GIF URL</label>
@@ -41,7 +41,7 @@ export const router = new Router([
 
         <!-- main content section-->
         <div class="col-md-9">
-          <div class="row" id="giftsContainer"></div>
+          <div class="row" id="gifts"></div>
         </div>
       </div>
     </div>

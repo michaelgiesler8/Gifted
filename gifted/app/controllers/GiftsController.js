@@ -7,7 +7,7 @@ import { setHTML } from "../utils/Writer.js"
 function _drawGifts() {
   let template = ''
   AppState.gifts.forEach(gift => template += gift.GiftCardTemplate)
-  setHTML('giftsContainer, template')
+  setHTML('gifts', template)
 }
 
 function _drawGiphyResults() {
