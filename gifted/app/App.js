@@ -1,20 +1,15 @@
 import { AuthController } from './controllers/AuthController.js';
+import { GiftsController } from './controllers/GiftsController.js';
 import { router } from './router-config.js';
-const USE_ROUTER = false
+
 
 class App {
-
+  router = router
   AuthController = new AuthController()
-  
-  constructor() {
-    if(USE_ROUTER){
-      this.router = router
-      this.router.init(this)
-    }
-  }
+  GiftsController = new GiftsController()
 }
 
-
 const app = new App()
-// @ts-ignore
+app.router.init(app)
 window.app = app
+export { app }
