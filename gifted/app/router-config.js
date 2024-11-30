@@ -18,11 +18,11 @@ export const router = new Router([
           <form onsubmit="app.GiftsController.createGift(event)">
             <div class="mb-3">
               <label for="tag">Tag</label>
-              <input type="text" class="form-control" name="tag" required max_length="120">
+              <input type="text" class="form-control" name="tag" required max_length="120" placeholder="Gift Name">
             </div>
             <div class="mb-3">
               <label for="url">GIF URL</label>
-              <input type="url" class="form-control" name="url" id="giftUrl" required>
+              <input type="url" class="form-control" name="url" id="giftUrl" required placeholder="Gift URL">
             </div>
             <button type="submit" class="btn btn-light w-100">Create Gift</button>
           </form>
