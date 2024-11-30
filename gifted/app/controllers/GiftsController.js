@@ -32,7 +32,6 @@ export class GiftsController {
     AppState.on('gifts', _drawGifts)
     AppState.on('giphyResults', _drawGiphyResults)
     AppState.on('account, this.getGifts')
-    this.getGifts()
   }
 
   async getGifts() {
@@ -51,7 +50,7 @@ export class GiftsController {
       await giftsService.createGift(giftData)
       form.reset()
       // @ts-ignore
-      bootstrap.Offcanvas.getInstance('#giftForm').hide()
+      // bootstrap.Offcanvas.getInstance('#giftForm').hide()
     } catch (error) {
       Pop.error(error)
     }

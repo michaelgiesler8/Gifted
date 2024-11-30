@@ -35,7 +35,7 @@ export const router = new Router([
                 <i class="mdi mdi-magnify"></i>
               </button>
             </div>
-            <div class="row" id=giphyResults"></div>
+            <div class="row" id="giphyResults"></div>
           </div>
         </div>
 
